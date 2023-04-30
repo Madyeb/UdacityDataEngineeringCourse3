@@ -1,9 +1,9 @@
 CREATE EXTERNAL TABLE `accelerometer_landing`(
-  `timestamp` string COMMENT 'from deserializer', 
+  `timestamp` bigint COMMENT 'from deserializer', 
   `user` string COMMENT 'from deserializer', 
-  `x` string COMMENT 'from deserializer', 
-  `y` string COMMENT 'from deserializer', 
-  `z` string COMMENT 'from deserializer')
+  `x` float COMMENT 'from deserializer', 
+  `y` float COMMENT 'from deserializer', 
+  `z` float COMMENT 'from deserializer')
 ROW FORMAT SERDE 
   'org.openx.data.jsonserde.JsonSerDe' 
 WITH SERDEPROPERTIES ( 
